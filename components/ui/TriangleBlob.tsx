@@ -24,7 +24,7 @@ export default function TriangleBlob({
     if (!blob) return;
 
     let animationId: number;
-    let startTime = Date.now() + delay;
+    const startTime = Date.now() + delay;
 
     const animate = () => {
       const elapsed = Date.now() - startTime;

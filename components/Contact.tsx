@@ -2,17 +2,14 @@
 
 import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import {
   SiGmail,
   SiLinkedin,
   SiGithub,
-  SiReact,
-  SiJavascript,
-  SiTypescript,
 } from "react-icons/si";
 import {
   FaLaptopCode,
-  FaMailBulk,
   FaPeopleArrows,
   FaPhoneSquare,
 } from "react-icons/fa";
@@ -72,7 +69,7 @@ const Contact = () => {
 
       setSubmitStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch (error) {
+    } catch {
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -175,9 +172,11 @@ const Contact = () => {
 
             {/* Laptop Image */}
             <div className="relative z-10 mb-5 text-black dark:text-white text-6xl sm:text-8xl font-bold animate-fade-in">
-              <img
+              <Image
                 src="https://static.vecteezy.com/system/resources/previews/008/853/677/non_2x/3d-illustration-laptop-free-png.png"
-                alt=""
+                alt="Laptop illustration"
+                width={400}
+                height={300}
                 className="block max-w-sm sm:max-w-lg"
               />
             </div>
@@ -197,7 +196,7 @@ const Contact = () => {
                   Get In Touch
                 </h2>
                 <p className="text-gray-600 dark:text-cyan-200">
-                  Let's work together on your next project
+                  Let&apos;s work together on your next project
                 </p>
               </div>
 
@@ -342,7 +341,7 @@ const Contact = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.7 }}
               >
-                <p>I'll get back to you within 24 hours</p>
+                <p>I&apos;ll get back to you within 24 hours</p>
               </motion.div>
             </div>
           </motion.div>
