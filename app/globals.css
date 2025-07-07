@@ -1,26 +1,78 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-background: #ffeede;
+  --color-foreground: #171717;
+ 
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --color-background: #191816;
+  --color-foreground: #ededed;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+button, a {
+  cursor: pointer;
+}
+html{
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-background);
+  color: var(--color-foreground);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Custom animations */
+@keyframes float {
+  0% {
+    opacity: 0;
+    transform: scale(0) translate(50vw, 50vh);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.2) translate(calc(50vw - 50%), calc(50vh - 50%));
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes scale-out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.animate-scale-out {
+  animation: scale-out 2s ease-in-out forwards;
+}
+
+.animate-float {
+  animation: float 2s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out 0.5s both;
 }
