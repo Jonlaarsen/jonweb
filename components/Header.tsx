@@ -8,6 +8,16 @@ import { motion } from "motion/react";
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <div className="transition-all duration-200 z-50 relative text-black dark:text-white">
       <motion.div
@@ -39,16 +49,16 @@ const Header = () => {
         <nav className="flex flex-col items-center gap-4">
           <ul className="flex flex-col gap-2  ">
             <li className="cursor-pointer duration-200 hover:scale-105 ">
-              <a href="#home">home</a>
+              <button onClick={() => scrollToSection("home")}>home</button>
             </li>
             <li className="cursor-pointer duration-200 hover:scale-105 ">
-              <a href="#about">about</a>
+              <button onClick={() => scrollToSection("about")}>about</button>
             </li>
             <li className="cursor-pointer duration-200 hover:scale-105  ">
-              <a href="#portfolio">portfolio</a>
+              <button onClick={() => scrollToSection("portfolio")}>portfolio</button>
             </li>
             <li className="cursor-pointer duration-200 hover:scale-105 ">
-              <a href="#contact"> contact</a>
+              <button onClick={() => scrollToSection("contact")}>contact</button>
             </li>
           </ul>
         </nav>

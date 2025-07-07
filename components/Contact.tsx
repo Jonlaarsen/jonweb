@@ -3,16 +3,8 @@
 import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import {
-  SiGmail,
-  SiLinkedin,
-  SiGithub,
-} from "react-icons/si";
-import {
-  FaLaptopCode,
-  FaPeopleArrows,
-  FaPhoneSquare,
-} from "react-icons/fa";
+import { SiGmail, SiLinkedin, SiGithub } from "react-icons/si";
+import { FaLaptopCode, FaPeopleArrows, FaPhoneSquare } from "react-icons/fa";
 
 // Custom hook to detect screen size
 const useScreenSize = () => {
@@ -143,7 +135,7 @@ const Contact = () => {
           Contact
         </h1>
         <div className="min-h-screen w-full  grid grid-cols-1 lg:grid-cols-2 px-5 pb-10">
-          <div className="h-[70vh] mb-20 sm:mb-0 sm:h-screen w-full relative pt-40 flex justify-center items-center">
+          <div className="h-[70vh] mb-20 sm:mb-10 sm:h-screen w-full relative pt-40 flex justify-center items-center">
             {/* Animated Icons around center */}
             {techIcons.map((icon, i) => (
               <motion.div
@@ -171,15 +163,23 @@ const Contact = () => {
             ))}
 
             {/* Laptop Image */}
-            <div className="relative z-10 mb-5 text-black dark:text-white text-6xl sm:text-8xl font-bold animate-fade-in">
+            <motion.div
+              initial={{
+                opacity: 0,
+                scale: 0.8,
+              }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="relative z-10 mb-12 ml-20 text-black dark:text-white text-6xl sm:text-8xl font-bold animate-fade-in"
+            >
               <Image
-                src="https://static.vecteezy.com/system/resources/previews/008/853/677/non_2x/3d-illustration-laptop-free-png.png"
+                src="/images/laptop3.png"
                 alt="Laptop illustration"
                 width={400}
                 height={300}
-                className="block max-w-sm sm:max-w-lg"
+                className="block max-w-sx sm:max-w-[20rem]"
               />
-            </div>
+            </motion.div>
           </div>
 
           {/* Right Side - Contact Form */}
