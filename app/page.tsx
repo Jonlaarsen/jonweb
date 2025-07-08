@@ -21,7 +21,7 @@ export default function Home() {
         <About />
       </div>
       <HeroParallaxCard products={Portfolio} />
-      <div className="w-full bg-[#ffdfda] border-y-4 dark:border-cyan-200 border-black dark:bg-[#2a2423] py-10 mt-20 ">
+      <div className="w-full bg-[#ffdfda] border-y-4 dark:border-cyan-200 border-black dark:bg-[#2a2423] py-5 sm:py-10 mt-50 sm: mt-20 ">
         <h1 className="text-7xl underline text-center w-full md:text-9xl font-bold py-30 text-black dark:text-cyan-200">
           Portfolio
         </h1>

@@ -170,14 +170,14 @@ const Contact = () => {
               }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="relative z-10 mb-12 ml-20 text-black dark:text-white text-6xl sm:text-8xl font-bold animate-fade-in"
+              className="relative z-10 mb-12  sm:ml-20 text-black dark:text-white text-6xl sm:text-8xl font-bold animate-fade-in"
             >
               <Image
                 src="/images/laptop3.png"
                 alt="Laptop illustration"
                 width={400}
                 height={300}
-                className="block max-w-sx sm:max-w-[20rem]"
+                className="block max-w-[15rem] sm:max-w-[20rem]"
               />
             </motion.div>
           </div>

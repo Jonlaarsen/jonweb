@@ -66,7 +66,7 @@ const Icons = [
 
     icon: <SiTailwindcss className="h-5 w-5 md:h-9 md:w-9" />,
     dx: { mobile: 80, desktop: 120 },
-    dy: { mobile: 220, desktop: 250 },
+    dy: { mobile: 190, desktop: 250 },
     color: "text-black dark:text-cyan-200",
   },
 
@@ -75,7 +75,7 @@ const Icons = [
     label: "github",
     icon: <SiGithub className="h-5 w-5 md:h-9 md:w-9" />,
     dx: { mobile: -80, desktop: -120 },
-    dy: { mobile: 220, desktop: 250 },
+    dy: { mobile: 190, desktop: 250 },
     color: "text-black dark:text-cyan-200",
   },
 
@@ -83,14 +83,14 @@ const Icons = [
     id: 7,
     icon: <SiBootstrap className="h-5 w-5 md:h-9 md:w-9" />,
     dx: { mobile: 80, desktop: 120 },
-    dy: { mobile: -240, desktop: -250 },
+    dy: { mobile: -220, desktop: -250 },
     color: "text-black dark:text-cyan-200",
   },
   {
     id: 8,
     icon: <SiHtml5 className="h-5 w-5 md:h-9 md:w-9" />,
     dx: { mobile: -80, desktop: -120 },
-    dy: { mobile: -240, desktop: -250 },
+    dy: { mobile: -220, desktop: -250 },
     color: "text-black dark:text-cyan-200",
   },
 ];
@@ -99,7 +99,7 @@ const Hero = () => {
   const isMobile = useScreenSize();
 
   return (
-    <div className="h-screen w-full relative  flex justify-center items-center">
+    <div className="min-h-screen h-full w-full relative  flex justify-center items-center">
       {/* Animated Icons around center */}
       {Icons.map((icon, i) => (
         <motion.div

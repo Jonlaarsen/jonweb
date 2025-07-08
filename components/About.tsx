@@ -17,7 +17,7 @@ const About = () => {
           <LuCodesandbox className="hidden md:block md:h-25 md:w-25" /> ?
         </motion.h1>
       </div>
-      <div className="w-full flex items-center px-10 bg-[#cfeaff] dark:text-white border-y-4 border-black dark:border-cyan-200 dark:bg-[#1e2225]  h-full min-h-[70vh] skew-y-6 ">
+      <div className="w-full flex items-center py-4 px-10 bg-[#cfeaff] dark:text-white border-y-4 border-black dark:border-cyan-200 dark:bg-[#1e2225]  h-full min-h-[70vh] skew-y-6 ">
         <motion.h1
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
