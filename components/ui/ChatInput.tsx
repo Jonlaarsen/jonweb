@@ -1,12 +1,12 @@
 "use client";
 import { useState } from "react";
+import { LuSend } from "react-icons/lu";
 
 interface ChatInputProps {
   onSend: (message: string) => void;
-  onOpenSettings: () => void;
 }
 
-export default function ChatInput({ onSend, onOpenSettings }: ChatInputProps) {
+export default function ChatInput({ onSend }: ChatInputProps) {
   const [message, setMessage] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -70,7 +70,7 @@ export default function ChatInput({ onSend, onOpenSettings }: ChatInputProps) {
           {/* Send button - changes appearance based on whether there's a message */}
           <button
             className={`
-              px-2 py-1 rounded-full transition-all
+              p-2  rounded-full transition-all
               ${
                 message.trim()
                   ? "bg-purple-600 text-white hover:bg-purple-700"
@@ -81,7 +81,7 @@ export default function ChatInput({ onSend, onOpenSettings }: ChatInputProps) {
             disabled={!message.trim()}
             aria-label="Send message"
           >
-            SEND
+            <LuSend />
           </button>
         </div>
       </div>

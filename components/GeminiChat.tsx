@@ -64,18 +64,6 @@ export default function GeminiChat() {
     }
   };
 
-  const handleOpenSettings = () => {
-    setIsSettingsOpen(true);
-  };
-
-  const handleCloseSettings = () => {
-    setIsSettingsOpen(false);
-  };
-
-  const handleSaveSettings = (newSettings: ChatSettings) => {
-    setSettings(newSettings);
-  };
-
   return (
     <div className="fixed bottom-2 right-2 z-[100]">
       {!isChatOpen && (
@@ -104,7 +92,7 @@ export default function GeminiChat() {
         onSave={handleSaveSettings}
         currentSettings={settings}
       /> */}
-          <ChatInput onSend={handleSend} onOpenSettings={handleOpenSettings} />
+          <ChatInput onSend={handleSend} />
         </div>
       )}
     </div>
