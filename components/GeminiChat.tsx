@@ -10,8 +10,8 @@ import { FaRobot } from "react-icons/fa";
 
 export default function GeminiChat() {
   const [history, setHistory] = useState<ChatHistory>([]);
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [settings, setSettings] = useState<ChatSettings>({
     temperature: 1,
     model: "gemini-1.5-flash",
